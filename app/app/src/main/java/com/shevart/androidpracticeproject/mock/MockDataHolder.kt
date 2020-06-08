@@ -10,7 +10,7 @@ object MockDataHolder {
         return@lazy listOf(
             Post(
                 date = Date().time,
-                userAvatarUrl = "https://motor.ru/thumb/200x0/filters:quality(75):no_upscale()/imgs/2020/06/03/14/3939995/a8cd783b4322462f6cc5ae12bcb5010320959891.jpg",
+                userAvatarUrl = "https://motor.ru/thumb/200x0/filters:quality(75):no_upscale()/imgs/2020/06/03/14/3940003/ee3f820dfb1a5fea94b3bf3034c6a152654eb84b.jpg",
                 userName = "milena_thebrowbar",
                 location = "The Brow Bar Kharkiv",
                 likesData = PostLikesData(

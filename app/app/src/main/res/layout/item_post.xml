@@ -7,16 +7,15 @@
     tools:ignore="ContentDescription"
     tools:layout_height="match_parent">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivPostUserAvatar"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:adjustViewBounds="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        tools:background="@color/greyLight"/>
 
     <TextView
         android:id="@+id/tvPostTitleUserName"

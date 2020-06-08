@@ -5,7 +5,6 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
 
-
     defaultConfig {
         applicationId "com.shevart.androidpracticeproject"
         minSdkVersion 21
@@ -38,6 +37,8 @@ dependencies {
     implementation "com.jakewharton.rxbinding2:rxbinding-design-kotlin:${rxBindingsVersion}"
 
     implementation "com.squareup.picasso:picasso:$picassoVersion"
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

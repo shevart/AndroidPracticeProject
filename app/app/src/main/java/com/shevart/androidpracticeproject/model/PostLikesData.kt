@@ -3,6 +3,6 @@ package com.shevart.androidpracticeproject.model
 data class PostLikesData(
     val totalLikeCounts: Long,
     val friendsLikes: List<String>,
-    // if use liked own post - true, otherwise false
-    val isUserCheater: Boolean
+    // if user liked post - true, otherwise false
+    val userLike: Boolean
 )

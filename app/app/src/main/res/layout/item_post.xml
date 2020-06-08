@@ -67,7 +67,7 @@
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:background="@color/greyLight"
-            android:scaleType="center" />
+            android:scaleType="centerCrop" />
     </FrameLayout>
 
     <ImageView

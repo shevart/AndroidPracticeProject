@@ -15,7 +15,7 @@ object MockDataHolder {
                 location = "The Brow Bar Kharkiv",
                 likesData = PostLikesData(
                     totalLikeCounts = 1,
-                    isUserCheater = false,
+                    userLike = false,
                     friendsLikes = listOf("Vasya", "Petya")
                 ),
                 postDescription = "Wow! My post description with great person quote!",
@@ -33,7 +33,7 @@ object MockDataHolder {
                 location = "Imola",
                 likesData = PostLikesData(
                     totalLikeCounts = 1,
-                    isUserCheater = false,
+                    userLike = false,
                     friendsLikes = listOf("Vasya", "Petya")
                 ),
                 postDescription = "There is my post description for this post.",

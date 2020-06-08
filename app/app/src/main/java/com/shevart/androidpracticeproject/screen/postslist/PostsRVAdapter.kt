@@ -21,7 +21,7 @@ class PostsRVAdapter(
             tvPostTitleUserName.setOnClickListener { postClickListener.onUserNameClick() }
             tvPostTitleLocation.setOnClickListener { postClickListener.onLocationClick() }
             ivPostTitleOptions.setOnClickListener { postClickListener.onOptionsClick() }
-            ivPostLikeButton.setOnClickListener { postClickListener.onLikeClick() }
+            ivPostLikeButton.setOnClickListener { postClickListener.onLikeClick(getItem(adapterPosition)) }
             ivPostComment.setOnClickListener { postClickListener.onCommentClick() }
             ivPostSendPost.setOnClickListener { postClickListener.onSendPostClick() }
             ivPostBookmark.setOnClickListener { postClickListener.onBookmarkClick() }
@@ -61,7 +61,7 @@ class PostsRVAdapter(
         fun onUserNameClick()
         fun onLocationClick()
         fun onOptionsClick()
-        fun onLikeClick()
+        fun onLikeClick(post: Post)
         fun onCommentClick()
         fun onSendPostClick()
         fun onBookmarkClick()

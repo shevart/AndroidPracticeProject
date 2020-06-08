@@ -5,9 +5,11 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.transition.TransitionManager
 import com.shevart.androidpracticeproject.R
+import com.shevart.androidpracticeproject.model.Post
 import com.shevart.androidpracticeproject.screen.base.AbsMvvmFragment
 import com.shevart.androidpracticeproject.screen.base.BaseFragment
 import com.shevart.androidpracticeproject.screen.postslist.PostsListViewModel.Event
+import com.shevart.androidpracticeproject.screen.postslist.PostsListViewModel.Event.RefreshPost
 import com.shevart.androidpracticeproject.screen.postslist.PostsListViewModel.State
 import com.shevart.androidpracticeproject.util.gone
 import com.shevart.androidpracticeproject.util.observeLiveDataForceNonNull
@@ -33,8 +35,8 @@ class PostsListFragment : AbsMvvmFragment<PostsListViewModel>() {
             showToast("onOptionsClick")
         }
 
-        override fun onLikeClick() {
-            showToast("onLikeClick")
+        override fun onLikeClick(post: Post) {
+            viewModel.onLikeButtonClick(post)
         }
 
         override fun onCommentClick() {
@@ -78,7 +80,9 @@ class PostsListFragment : AbsMvvmFragment<PostsListViewModel>() {
     }
 
     private fun handleEvent(event: Event) {
-
+        when(event) {
+            is RefreshPost -> refreshPost(event)
+        }
     }
 
     private fun showLoading() {
@@ -92,5 +96,9 @@ class PostsListFragment : AbsMvvmFragment<PostsListViewModel>() {
         vwLoading.gone()
         rvPostList.visible()
         adapter.updateItems(state.posts)
+    }
+
+    private fun refreshPost(event: RefreshPost) {
+        adapter.updateItem(event.post, adapter.getItemPosition(event.post))
     }
 }
